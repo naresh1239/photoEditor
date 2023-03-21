@@ -14,7 +14,7 @@ const PhotoEdit = () => {
     contrast : 100,
     saturate : 100,
     invert : 0,
-    blur : 1
+    blur : 0
 
   })
 const [rangeTitle, setrangeTitle] = useState({
