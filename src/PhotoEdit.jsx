@@ -68,7 +68,7 @@ useEffect(() => {
       float3.style.top = Math.floor( Math.random() * Math.random() * 100) + "%"
   
     // console.log(Math.floor( Math.random() * 500))
-    console.log(Math.floor( Math.random() * 100))
+
   }
   setInterval(()=>{
     randomfloat()
