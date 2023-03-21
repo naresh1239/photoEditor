@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react'
-import {brightness} from "./../public/images/brightness.png"
 const PhotoEdit = () => {
   const [inputval, setinputval] = useState({
     brightness : 100,
