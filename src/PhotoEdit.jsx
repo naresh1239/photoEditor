@@ -1,4 +1,13 @@
 import React,{useState,useEffect} from 'react'
+import blurimg from "./images/blur.png"
+import brightnss from "./images/brightnss.png"
+import contrast from "./images/contrast.png"
+import invert from "./images/invert.png"
+import opactiy from "./images/opactiy.png"
+import flip from "./images/flip.png"
+import rotateleft from "./images/rotateleft.png"
+import rotateright from "./images/rotateright.png"
+
 const PhotoEdit = () => {
   const [inputval, setinputval] = useState({
     brightness : 100,
@@ -191,19 +200,19 @@ const saveimg = () =>{
   <h3>Filters</h3>
   <div class="icons_room">
           <button title="brightness" id="brightness" class="active" onClick={()=>selectbtn(0)}>
-            <img src="../images/brightnss.png" alt="" />
+            <img src={brightnss} alt="" />
           </button>
           <button title="contrast" id="contrast"onClick={()=>selectbtn(1)}>
-            <img src=".../images/contrast.png" alt="" />
+            <img src={contrast} alt="" />
           </button>
           <button title="saturate" id="saturate" onClick={()=>selectbtn(2)}>
-            <img src="../images/opactiy.png" alt="" />
+            <img src={opactiy} alt="" />
           </button>
           <button title="invert" id="invert" onClick={()=>selectbtn(3)}>
-            <img src="../images/invert.png" alt="" />
+            <img src={invert} alt="" />
           </button>
           <button title="blur" id="blur" onClick={()=>selectbtn(4)}>
-            <img src="../images/blur.png" alt="" />
+            <img src={blurimg} alt="d" />
           </button>
         </div>
   </div>
@@ -220,10 +229,10 @@ const saveimg = () =>{
   <h3>Rotate & Flip</h3>
   <div className='other-controls'>
 
-  <button title="rotate left" id="rotate_left"><img src="/images/rotateleft.png" alt="" onClick={()=>rotate_btns('rotate_left')}/></button>
-          <button title="rotate right" id="rotate_right"><img  src="/images/rotateright.png" alt="" onClick={()=>rotate_btns('rotate_right')} /></button>
-          <button title="flip x" id="flip_x"><img src="/images/flip.png" alt="" onClick={()=>rotate_btns('flip_x')}/></button>
-          <button title="flip y" id="flip_y"><img src="/images/flip.png" alt="" onClick={()=>rotate_btns('flip_y')}/></button>
+  <button title="rotate left" id="rotate_left"><img src={rotateleft} alt="" onClick={()=>rotate_btns('rotate_left')}/></button>
+          <button title="rotate right" id="rotate_right"><img  src={rotateright} alt="" onClick={()=>rotate_btns('rotate_right')} /></button>
+          <button title="flip x" id="flip_x"><img src={flip} alt="" onClick={()=>rotate_btns('flip_x')}/></button>
+          <button title="flip y" id="flip_y"><img src={flip} alt="" onClick={()=>rotate_btns('flip_y')}/></button>
         </div>
 
 </div>
@@ -236,7 +245,7 @@ const saveimg = () =>{
   <div className='photo-area'>
 <div className='img-area'>
 <input type="file" name="" id="selectImg" accept="image/*" onChange={imagechange}  hidden />
-<img src="/images/thin-line-black-camera-logo-like-upload-your-photo-thin-line-black-camera-logo-like-upload-your-photo-graphic-art-design-element-106033006.jpg" alt="" id='image'></img>
+<img src="https://cdn.dribbble.com/users/34020/screenshots/3993396/media/de9e4cdb950d3dbf6798d100eed14442.gif" alt="" id='image'></img>
 </div>
 <div className='image-btns'>
   <button onClick={getphoto} className="btns">Choose Image</button>
