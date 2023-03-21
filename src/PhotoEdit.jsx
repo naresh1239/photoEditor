@@ -141,6 +141,7 @@ console.log(rotate)
 const resetbtn = () =>{
   let filter_buttons = document.getElementById("brightness");
   image = document.getElementById("image")
+  image.style.filter = `brightness(100%) contrast(100%) saturate(100%) invert(0%) blur(0px)`;
 setinputval({
   brightness : 100,
   contrast : 100,
@@ -149,7 +150,7 @@ setinputval({
   blur : 0
 
 })
-  image.style.filter = `brightness(100%) contrast(100%) saturate(100%) invert(0%) blur(0px)`;
+
 document.querySelector(".active")?.classList.remove("active");
 filter_buttons.classList.add("active")
 setrangeTitle({  title : 'brightness',
