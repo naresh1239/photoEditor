@@ -159,7 +159,7 @@ num : 100})
   flip_x = 1;
   flip_y = 1;
   image.style.transform = `rotate(${rotate}deg) scale(${flip_x}, ${flip_y})`;
-  image.style.filter = `brightness(${inputval.brightness}%) contrast(${inputval.contrast}%) saturate(${inputval.saturate}%) invert(${inputval.invert}%) blur(${inputval.blur}px)`;
+  image.style.filter = `brightness(100%) contrast(100%) saturate(100%) invert(0%) blur(0px)`;
 }
 const saveimg = () =>{
   image = document.getElementById("image")
