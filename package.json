@@ -1,5 +1,6 @@
 {
   "name": "editphotoreact",
+  "homepage": "https://naresh1239.github.io/photoEditor",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
