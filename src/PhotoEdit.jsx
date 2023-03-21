@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-
+import {brightness} from "./../public/images/brightness.png"
 const PhotoEdit = () => {
   const [inputval, setinputval] = useState({
     brightness : 100,
@@ -192,19 +192,19 @@ const saveimg = () =>{
   <h3>Filters</h3>
   <div class="icons_room">
           <button title="brightness" id="brightness" class="active" onClick={()=>selectbtn(0)}>
-            <img src="/images/brightnss.png" alt="" />
+            <img src="../images/brightnss.png" alt="" />
           </button>
           <button title="contrast" id="contrast"onClick={()=>selectbtn(1)}>
-            <img src="/images/contrast.png" alt="" />
+            <img src=".../images/contrast.png" alt="" />
           </button>
           <button title="saturate" id="saturate" onClick={()=>selectbtn(2)}>
-            <img src="/images/opactiy.png" alt="" />
+            <img src="../images/opactiy.png" alt="" />
           </button>
           <button title="invert" id="invert" onClick={()=>selectbtn(3)}>
-            <img src="/images/invert.png" alt="" />
+            <img src="../images/invert.png" alt="" />
           </button>
           <button title="blur" id="blur" onClick={()=>selectbtn(4)}>
-            <img src="/images/blur.png" alt="" />
+            <img src="../images/blur.png" alt="" />
           </button>
         </div>
   </div>
