@@ -112,7 +112,7 @@ const getphoto =  () => {
     image = document.getElementById("image")
   setinputval((perv) => ({...perv, [e.target.name]:e.target.value}))
   setrangeTitle((perv) => ({...perv, num : e.target.value})) 
-   image.style.filter = `brightness(100%) contrast(100%) saturate(100%) invert(0%) blur(0px)`;
+   image.style.filter = `brightness(${inputval.brightness}%) contrast(${inputval.contrast}%) saturate(${inputval.saturate}%) invert(${inputval.invert}%) blur(${inputval.blur}px)`;
   
   }
 
@@ -149,7 +149,7 @@ setinputval({
   blur : 0
 
 })
-image.style.filter = `brightness(${inputval.brightness}%) contrast(${inputval.contrast}%) saturate(${inputval.saturate}%) invert(${inputval.invert}%) blur(${inputval.blur}px)`;
+  image.style.filter = `brightness(100%) contrast(100%) saturate(100%) invert(0%) blur(0px)`;
 document.querySelector(".active")?.classList.remove("active");
 filter_buttons.classList.add("active")
 setrangeTitle({  title : 'brightness',
