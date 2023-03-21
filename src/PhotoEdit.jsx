@@ -7,8 +7,12 @@ import opactiy from "./images/opactiy.png"
 import flip from "./images/flip.png"
 import rotateleft from "./images/rotateleft.png"
 import rotateright from "./images/rotateright.png"
-
+import paintbrush from "./images/paintbrush.png"
+import popsicle from "./images/popsicle.png"
+import watercolor from "./images/watercolor.png"
 const PhotoEdit = () => {
+
+  console.count('re-render')
   const [inputval, setinputval] = useState({
     brightness : 100,
     contrast : 100,
@@ -50,25 +54,28 @@ let filter_name
   
 //     })
  
-// const randomfloat = () =>{
-//   let floatdiv = document.querySelector(".img-float")
-//   let float2 = document.querySelector(".float2")
-//   let float3 = document.querySelector(".float3")
+useEffect(() => {
+  const randomfloat = () =>{
+    let floatdiv = document.querySelector(".img-float")
+    let float2 = document.querySelector(".float2")
+    let float3 = document.querySelector(".float3")
+  
+      // console.log(floatdiv)
+      floatdiv.style.left = Math.floor( Math.random() * Math.random() * 100) + "%"
+      floatdiv.style.top = Math.floor( Math.random() * Math.random() * 100) + "%"
+      float2.style.left = Math.floor( Math.random() * Math.random() * 100) + "%"
+      float2.style.top = Math.floor( Math.random() * Math.random() * 100) + "%"   
+      float3.style.left = Math.floor( Math.random() * Math.random() * 100) + "%"
+      float3.style.top = Math.floor( Math.random() * Math.random() * 100) + "%"
+  
+    // console.log(Math.floor( Math.random() * 500))
+    console.log(Math.floor( Math.random() * 100))
+  }
+  setInterval(()=>{
+    randomfloat()
+  },7000)
+}, [])
 
-//     // console.log(floatdiv)
-//     floatdiv.style.left = Math.floor( Math.random() * 100) + "%"
-//     floatdiv.style.top = Math.floor( Math.random() * 100) + "%"
-//     float2.style.left = Math.floor( Math.random() * 100) + "%"
-//     float2.style.top = Math.floor( Math.random() * 100) + "%"   
-//     float3.style.left = Math.floor( Math.random() * 100) + "%"
-//     float3.style.top = Math.floor( Math.random() * 100) + "%"
-
-//   // console.log(Math.floor( Math.random() * 500))
-//   console.log(Math.floor( Math.random() * 100))
-// }
-// setInterval(()=>{
-//   randomfloat()
-// },7000)
 
 const selectbtn = (i) =>{
   let filter_buttons = document.querySelectorAll(".icons_room button");
@@ -187,9 +194,9 @@ const saveimg = () =>{
   return (
 <main>
   <div className='circle'></div>
-  {/* <div className='img-float'><img src='/images/watercolor.png' alt='nothing'></img></div>
-  <div className='img-float float2'><img src='/images/paintbrush.png' alt='nothing'></img></div>
-  <div className='img-float float3'><img src='/images/popsicle.png' alt='nothing'></img></div> */}
+  <div className='img-float'><img src={watercolor} alt='nothing'></img></div>
+  <div className='img-float float2'><img src={paintbrush} alt='nothing'></img></div>
+  <div className='img-float float3'><img src={popsicle} alt='nothing'></img></div>
 <div className='sub-main'>
   <div className='controlls-area disable'>
 <div className='heading'> 
@@ -221,11 +228,11 @@ const saveimg = () =>{
   <div className='range-control'>
   <div className='select-btn'><div id='filter_name'>{rangeTitle.title}</div><div>{rangeTitle.num}% </div></div>
 
-    <input type="range" id='range' name="brightness" className='range show' max='200'  value={inputval.brightness} onChange={(e)=> changInput(e)}/>
-    <input type="range" id='range' name='contrast' className='range' max='200' value={inputval.contrast} onChange={(e)=> changInput(e)}/>
-    <input type="range" id='range' name='saturate' className='range' max='200' value={inputval.saturate} onChange={(e)=> changInput(e)}/>
-    <input type="range" id='range' name='invert' className='range' max='200' value={inputval.invert} onChange={(e)=> changInput(e)}/>
-    <input type="range" id='range' name='blur' className='range' max='10' value={inputval.blur} onChange={(e)=> changInput(e)}/>
+    <input type="range" id='range'  min={0} step={1} name="brightness" className='range show' max='200'  value={inputval.brightness} onChange={changInput}/>
+    <input type="range"  min={0} step={1} id='range' name='contrast' className='range' max='200' value={inputval.contrast} onChange={changInput}/>
+    <input type="range"  min={0} step={1} id='range' name='saturate' className='range' max='200' value={inputval.saturate} onChange={changInput}/>
+    <input type="range"  min={0} step={1} id='range' name='invert' className='range' max='200' value={inputval.invert} onChange={changInput}/>
+    <input type="range"  min={0} step={1} id='range' name='blur' className='range' max='10' value={inputval.blur} onChange={changInput}/>
   </div>
   <div className='other-controls-main'>
   <h3>Rotate & Flip</h3>
