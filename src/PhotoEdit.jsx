@@ -12,7 +12,6 @@ import popsicle from "./images/popsicle.png"
 import watercolor from "./images/watercolor.png"
 const PhotoEdit = () => {
 
-  console.count('re-render')
   const [inputval, setinputval] = useState({
     brightness : 100,
     contrast : 100,
@@ -74,6 +73,7 @@ useEffect(() => {
   setInterval(()=>{
     randomfloat()
   },7000)
+  randomfloat()
 }, [])
 
 
