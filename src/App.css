@@ -1,0 +1,311 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dfdfdf;
+  position: relative;
+  overflow: hidden;
+
+}
+.sub-main {
+  min-width: 65%;
+  margin: auto;
+  height: 70vh;
+  flex-wrap: wrap;
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.28);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.3px);
+-webkit-backdrop-filter: blur(5.3px);
+border: 1px solid rgba(255, 255, 255, 0.33);
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px #ccc;
+  padding: 20px;
+  position: relative;
+}
+.controlls-area{
+width: 35%;
+
+  height: 100%;
+  position: relative;
+  
+}
+.sub-controls{
+     margin-top: 43px;
+     box-shadow: -1px -2px 31px -1px #eee;
+     padding: 20px;
+     border-radius: 4px;
+     transition:all  0.3s linear ;
+     background: white;
+}
+.controlls-area .heading h1{
+  /* font-size: 27px;
+  font-family: monospace;
+font-weight: 500; */
+position: relative;
+padding: 0;
+margin: 0;
+font-family: "Raleway", sans-serif;
+font-weight: 300;
+font-size: 40px;
+color: #080808;
+-webkit-transition: all 0.4s ease 0s;
+-o-transition: all 0.4s ease 0s;
+transition: all 0.4s ease 0s;
+}
+
+.controlls-area .heading h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
+}
+.controlls-area .heading h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+.controlls-area .heading h1 {
+  text-transform: capitalize;
+}
+.controlls-area .heading h1:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  content: "";
+  background-color: #c50000;
+}
+.controlls-area .heading h1 span {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 3em;
+  padding-left: 0.25em;
+  color: rgba(0, 0, 0, 0.4);
+  padding-bottom: 10px;
+}
+.controlls-area .heading h1 {
+  text-align:center;
+}
+.controlls-area .heading h1:before {
+  left:50%; margin-left:-30px;
+}
+
+
+.photo-area{
+width: 65%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.Filters-control{
+  width: 100%;
+}
+
+.Filters-control .icons_room{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.icons_room button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.Filters-control .icons_room button img{
+   width: 20px;
+}
+.other-controls{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 13px 0px;
+}
+.other-controls button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.other-controls button img{
+  width: 20px;
+}
+
+.other-controls button:last-child{
+  transform: rotate(90deg);
+}
+
+
+
+
+/* .image-btns{
+  text-align: right;
+  padding: 30px;
+} */
+.photo-area{
+height: 100%;
+padding: 20px;
+}
+.img-area{
+  width: 100%;
+  height: 88%;
+}
+
+.img-area img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  
+}
+.image-btns {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.image-btns button{
+  padding:10px 20px;
+
+}
+
+
+.range-control input {
+  width: 100%;
+  cursor: pointer;
+
+}
+.range-control{
+  width: 100%;
+  padding: 7px;
+  margin: 23px 0px;
+}
+.select-btn{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Filters-control h3{
+  margin-top: 27px;
+  font-size: 17px;
+  font-family: monospace;
+  font-weight: 300;
+  padding: 6px 10px;
+}
+.icons_room .active{
+margin-top: 5px;
+}
+.icons_room .active{
+  background-color: #ccccff;
+  width: 28px;
+  height: 29px;
+  border-radius: 50px;
+}
+.other-controls-main h3{
+  margin-top: 5px;
+  font-size: 17px;
+  font-family: monospace;
+  font-weight: 300;
+  padding: 6px 10px;
+}
+.select-btn{
+  font-size: 14px;
+  font-family: monospace;
+  font-weight: 300;
+
+}
+.controls-buttons button{
+  padding:10px 20px;
+  margin: 10px 21px;
+}
+.range{
+  display: none;
+}
+.show{
+  display: block !important;
+}
+.disable{
+  pointer-events: none;
+  opacity: .5;
+  cursor: not-allowed !important;
+}
+
+.btns{
+  background: #6380e3;
+  color: #fff !important;
+  border: 1px solid #6380e3;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.btns:hover{
+  color: #6380e3 !important;
+  background: #fff !important;
+  border: 1px solid #6380e3;
+  border-radius: 7px;
+}
+.btns:disabled{
+  color: #e36363 !important;
+  background: #aaaaaa !important;
+  border: none !important;
+  border-radius: 7px;
+  cursor: not-allowed;
+}
+.circle{
+  position: absolute;
+  left: 11%;
+top: 8%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: white;
+transition: all 0.3s linear;
+animation: effectmove 10s linear infinite;
+}
+
+@keyframes effectmove {
+  0%{  left: 11%;
+       top: 8%;}
+  50% {left: 0%;top: 0%;}
+   100%{
+     left: 11%;
+    top: 8%;
+    }
+}
+
+.img-float{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 11%;
+  top: 8%;
+  transition: all 7s linear;
+}
+.img-float img{
+  width: 100%;
+  height: 100%;
+ object-fit: cover;
+}
+.float2{
+  left:50%;
+  top: 28%;
+}
+.float3{
+  left:70%;
+  top: 48%;
+}
