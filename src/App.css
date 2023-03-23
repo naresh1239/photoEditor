@@ -2,6 +2,7 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
+  transition: all 0.3s linear;
 }
 main{
   width: 100%;
@@ -12,7 +13,6 @@ main{
   background-color: #dfdfdf;
   position: relative;
   overflow: hidden;
-
 }
 .sub-main {
   min-width: 65%;
