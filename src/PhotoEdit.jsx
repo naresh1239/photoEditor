@@ -10,6 +10,7 @@ import rotateright from "./images/rotateright.png"
 import paintbrush from "./images/paintbrush.png"
 import popsicle from "./images/popsicle.png"
 import watercolor from "./images/watercolor.png"
+import upload from "./images/upload.gif"
 const PhotoEdit = () => {
 
   const [inputval, setinputval] = useState({
@@ -254,7 +255,7 @@ const saveimg = () =>{
   <div className='photo-area'>
 <div className='img-area'>
 <input type="file" name="" id="selectImg" accept="image/*" onChange={imagechange}  hidden />
-<img src="https://cdn.dribbble.com/users/34020/screenshots/3993396/media/de9e4cdb950d3dbf6798d100eed14442.gif" alt="" id='image'></img>
+<img src={upload} alt="Upload image" id='image'></img>
 </div>
 <div className='image-btns'>
   <button onClick={getphoto} className="btns">Choose Image</button>
